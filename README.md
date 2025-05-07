@@ -59,9 +59,7 @@ By using Twikit, you can access functionalities such as the following:
 ## Installing
 
 ```bash
-
-pip install twikit
-
+pip install -e git+https://github.com/dwiHard/twikit.git#egg=twikit
 ```
 
 
