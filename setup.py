@@ -23,10 +23,10 @@ setup(
         'Js2Py-3.13'
     ],
     python_requires='>=3.8',
-    description='Twitter API wrapper for python with **no API key required**.',
+    description='Twitter API wrapper for python with **no API key required**. fork from https://github.com/d60/twikit',
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT',
-    url='https://github.com/d60/twikit',
+    url='https://github.com/dwiHard/twikit',
     package_data={'twikit': ['py.typed']}
 )
