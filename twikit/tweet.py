@@ -239,6 +239,26 @@ class Tweet:
         return [i['text'] for i in hashtags]
 
     @property
+    def user_mentions_name(self) -> list[str]:
+        note_tweet_results = self._note_tweet_results
+        if note_tweet_results:
+            entity_set = note_tweet_results['result']['entity_set']
+            user_mentions = entity_set.get('user_mentions', [])
+        else:
+            user_mentions = self._legacy['entities'].get('user_mentions', [])
+        return [i['name'] for i in user_mentions]
+
+    @property
+    def user_mentions_screen_name(self) -> list[str]:
+        note_tweet_results = self._note_tweet_results
+        if note_tweet_results:
+            entity_set = note_tweet_results['result']['entity_set']
+            user_mentions = entity_set.get('user_mentions', [])
+        else:
+            user_mentions = self._legacy['entities'].get('user_mentions', [])
+        return [i['screen_name'] for i in user_mentions]
+
+    @property
     def urls(self) -> list[str]:
         note_tweet_results = self._note_tweet_results
         if note_tweet_results:
